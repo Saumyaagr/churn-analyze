@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <title>Sample Form</title>
+    <style>
+        .diabetis
+        {
+            width:300px;
+            height:25px;
+            background-color:#fffbfc;
+            border-style: ridge;
+            border-color:gray;
+            border-radius:6px;
+        }
+        body
+        {
+            font-family:sans-serif;
+        }
+        #sub
+        {
+            width:200px;
+            height:25px;
+            background-color:#FFFFFF;
+            border-style: ridge;
+            border-color:gray;
+            border-radius:6px;
+        }
+    </style>
+</head>
+<body style="background-color:#615c4e">
+    <center>
+        <h1 style="color:red;">Telecom Customer Churn Prediction</h1>
+        <div style="background-color:#b0a883;">
+        <br/><br/>
+        {% if result %}
+        <p style="color:blue;font-size:30px;"> Customer Churn (Yes:1, No:0) : {{result}}</p>
+        {% endif %}
+        {% if err_msg %}
+        <p style="color:red;font-size:15px;">{{err_msg}}</p>
+        {% endif %}
+        <br/>
+        <form method="post" action="/">
+            <input type="text" name="a" class="diabetis" placeholder="   Enter CreditScore of Customer" required><br/><br/>
+            <input type="text" name="b" class="diabetis" placeholder="   Enter Geography(France:1, Germany:2, Spain:3" required><br/><br/>
+            <input type="text" name="c" class="diabetis" placeholder="   Enter Gender(Female:1, Male:0)" required><br/><br/>
+            <input type="text" name="d" class="diabetis" placeholder="   Enter Tenure of Customer(years)" required><br/><br/>
+            <input type="text" name="e" class="diabetis" placeholder="   Enter IsActiveMember (Yes:1, No:0)" required><br/><br/>
+	    <input type="text" name="f" class="diabetis" placeholder="   Enter Balance " required><br/><br/>
+
+
+
+            <input type="submit" value="Submit" id="sub">
+            <br/><br/><br/>
+        </form>
+        </div>
+    </center>
+</body>
+</html>
